@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import UserCard from "./UserCard";
+import Followers from "./Followers";
+import SearchBar from "./SearchBar";
 import axios from "axios";
 
 class App extends React.Component {
@@ -37,9 +39,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>GitHub Meet</h1>
+          <h1>GitHub User Snapshot</h1>
+          <SearchBar user={this.state.user}/>
         </header>
-        <UserCard user={this.state.user} followers={this.state.followers}/>
+        <UserCard user={this.state.user}/>
+        <div className="Followers-section">
+          <h2 className="Subtitle">User's Followers</h2>
+        <Followers followers={this.state.followers}/>
+        </div>
       </div>
     );
   }
