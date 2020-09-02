@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+  background-image: linear-gradient(to top, #fc3e3e, #ff6b30, #ff9126, #ffb529, #fcd63e);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.0em;
+  font-family: "Gayathri"
+
+}
+
+.Followers-section {
+  margin-top: 50px;
+}
+
+.Subtitle {
+  width: 100%;
+  font-family: "Gayathri";
+  font-size: 2.6em;
+  background-color: black;
+  color: white;
+  height: 100px;
+  padding-top: 50px;
+}
+
+.spot1 { right: -10%; top: -20%; animation: move 4s infinite;}
+.spot2 { left: -10%; top: -20%; animation: move2 4s infinite;}
+.spotlight {
+  position: absolute;
+	width: 60px;
+	height: 0px;
+  border-top: 800px solid rgba(255,255,255,0.25);
+  border-left: 40px solid transparent;
+  border-bottom: 0px solid #575;
+  border-right: 40px solid transparent;
+  background-color: transparent;
+  transform-origin: 50% 100% 0;
+  z-index: 0;
+  /*-webkit-transition-timing: ease-in-out;*/
+}
+
+ @keyframes move {
+  0%  { 
+    -webkit-transform: rotate(50deg);
+  }
+  50% {
+    -webkit-transform: rotate(-50deg);
+  }
+  100% {
+    -webkit-transform: rotate(50deg);
+  }
+}
+
+ @keyframes move2 {
+  0%  { 
+    -webkit-transform: rotate(-50deg);
+  }
+  50% {
+    -webkit-transform: rotate(50deg);
+  }
+  100% {
+    -webkit-transform: rotate(-50deg);
+  }
+}
+
+
+
+
